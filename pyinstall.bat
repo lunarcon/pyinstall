@@ -3,8 +3,8 @@ where python.pdb > temp.txt
 set /p dta=<temp.txt
 set dta=%dta:\python.pdb=%
 cd %dta%
-echo Welcome to Aditya Vikram's Python Module Installer
-echo ==================================================
+echo pyinstall by Aditya V
+echo =====================
 echo is pip installed? (y/n)
 set /p ynq=
 if %ynq%==y (
