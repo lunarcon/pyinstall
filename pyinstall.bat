@@ -1,0 +1,33 @@
+@echo off
+where python.pdb > temp.txt
+set /p dta=<temp.txt
+set dta=%dta:\python.pdb=%
+cd %dta%
+del %~dp0temp.txt
+echo Welcome to pyinstall by Aditya V
+echo ================================
+echo if it does not work, try placing this script in the same folder as your python installation
+echo is pip installed? (y/n)
+set /p ynq=
+if %ynq%==y (
+echo ok.
+)
+if %ynq%==n (
+echo ok. downloading setup...
+bitsadmin /transfer PIP /download /priority high https://bootstrap.pypa.io/get-pip.py %~dp0pipsetup.py
+echo downloaded. trying to install...
+echo if it does not work, try placing this script in the same folder as your python installation
+%~dp0pipsetup.py
+echo cleaning up...
+del %~dp0pipsetup.py
+)
+:start
+echo enter module or library name 
+set /p fnm= 
+python -m pip install %fnm%
+echo install another module/library? (y/n)
+set /p xnq=
+if %xnq%==y (
+goto start
+)
+pause
