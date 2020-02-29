@@ -1,12 +1,16 @@
 @echo off
-where python.pdb > temp.txt
-set /p dta=<temp.txt
-set dta=%dta:\python.pdb=%
-cd %dta%
-del %~dp0temp.txt
 echo Welcome to pyinstall by Aditya V
 echo ================================
 echo if it does not work, try placing this script in the same folder as your python installation
+where python.exe > temp.txt
+set /p dta=<temp.txt
+set /a "LastNum+=1"
+del %~dp0temp.txt
+echo.
+echo found python installation at '%dta%'
+echo.
+set dta=%dta:\python.exe=%
+chdir %dta%
 echo is pip installed? (y/n)
 set /p ynq=
 if %ynq%==y (
