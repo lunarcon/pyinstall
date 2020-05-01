@@ -1,6 +1,6 @@
 @echo off
-echo Welcome to pyinstall by Aditya V
-echo ================================
+echo Welcome to pyinstall by at-adityavikram
+echo =======================================
 echo.
 echo if it does not work, try placing this script in the same directory as your python installation.
 echo also make sure that mentioned directory is not read^-only and that this user has ownership of it.
