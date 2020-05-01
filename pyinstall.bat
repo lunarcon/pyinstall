@@ -3,7 +3,8 @@ echo Welcome to pyinstall by at-adityavikram
 echo =======================================
 echo.
 echo if it does not work, try placing this script in the same directory as your python installation.
-echo also make sure that mentioned directory is not read^-only and that this user has ownership of it.
+echo also make sure that the python installation directory is not read^-only and that this user has 
+echo permission to access it.
 where python.exe > temp.txt
 set /p dta=<temp.txt
 set /a "LastNum+=1"
